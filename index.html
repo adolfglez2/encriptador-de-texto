@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptador</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+<header class="encabezado">
+  <div class="contenedor-logo">
+    <img src="img/Logo.png" alt="Imagen superior" class="logo">
+ </div>
+ 
+</header>
+
+  
+  <main class="contenido-principal">
+    <section class="seccion seccion-input">
+      <textarea class="texto" id="input-text" placeholder="Ingrese el texto aquí"></textarea>
+      <div class="grupo-botones">
+        <button class="boton boton-encriptar" onclick="encriptar()">Encriptar</button>
+        <button class="boton boton-desencriptar" onclick="desencriptar()">Desencriptar</button>
+      </div>
+    </section>
+    <section class="seccion seccion-salida">
+      <h2 class="titulo-resultados">Resultado:</h2>
+      <p class="sin-mensaje" id="output-text">No hay mensaje</p>
+      <button class="boton boton-copiar" onclick="copiarTexto()">Copiar</button>
+      <button class="boton boton-limpiar" onclick="limpiarTexto()">Limpiar</button>
+      <button class="boton boton-pegar" id="pegar-boton" onclick="pegarTexto()">Pegar en entrada</button>
+    </section>
+  </main>
+  <div class="cuadro-alerta" id="alert-box">
+    <div class="contenido-alerta">
+      <p>Por favor, ingrese solo letras minúsculas sin acentos ni caracteres especiales.</p>
+      <button class="boton boton-ok" onclick="cerrarAlerta()">Aceptar</button>
+    </div>
+  </div>
+  <div class="mensaje-copiado" id="mensaje-copiado">
+    <p>Texto copiado al portapapeles</p>
+    <button class="boton boton-pegar" onclick="pegarTexto()">Pegar en el campo</button>
+    <button class="boton boton-cerrar" onclick="cerrarMensajeCopiado()">Cerrar</button>
+  </div>
+  <footer class="pie-pagina">
+    <p>Proyecto creado por Adolfo Gonzalez Gonzalez</p>
+  </footer>
+  <script src="encript.js"></script>
+</body>
+</html>
